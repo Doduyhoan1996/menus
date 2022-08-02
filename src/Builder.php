@@ -99,7 +99,7 @@ class Builder
 	public function extractAttributes($options = array())
 	{
 		if (is_array($options)) {
-			if (count($this->groupStack) > 0) {
+			if (count((array) $this->groupStack) > 0) {
 				$options = $this->mergeWithLastGroup($options);
 			}
 
@@ -154,7 +154,7 @@ class Builder
 	 */
 	public function getLastGroupPrefix()
 	{
-		if (count($this->groupStack) > 0) {
+		if (count((array) $this->groupStack) > 0) {
 			return array_get(last($this->groupStack), 'prefix', '');
 		}
 
