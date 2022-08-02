@@ -1,6 +1,6 @@
 {
     "name": "caffeinated/menus",
-    "description": "Laravel Menus",
+    "description": "Laravel 5 Menus",
     "keywords": ["menu", "navigation", "laravel", "caffeinated"],
     "license": "MIT",
     "authors": [
@@ -10,22 +10,16 @@
         }
     ],
     "require": {
-        "php": "^7.2|^8.0",
-        "illuminate/support": "^6.0|^7.0|^8.0"
+        "php": ">=5.5.9",
+        "illuminate/support": "~5.1.24|5.2.*",
+        "illuminate/config": "5.1.*|5.2.*",
+        "illuminate/routing": "5.1.*|5.2.*",
+        "illuminate/view": "5.1.*|5.2.*",
+        "laravelcollective/html": "5.1.*|5.2.*"
     },
     "autoload": {
         "psr-4": {
             "Caffeinated\\Menus\\": "src/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-               "Caffeinated\\Menus\\MenusServiceProvider"
-            ],
-            "aliases": {
-                "Menu": "Caffeinated\\Menus\\Facades\\Menu"
-            }
         }
     }
 }
